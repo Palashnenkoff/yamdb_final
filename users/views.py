@@ -1,9 +1,9 @@
-from django.core.mail import send_mail
+from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.contrib.auth.tokens import default_token_generator
-from django.conf import settings
+from django.core.mail import send_mail
 from django.shortcuts import get_object_or_404
-from rest_framework import status, permissions
+from rest_framework import permissions, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -11,9 +11,7 @@ from rest_framework.viewsets import ModelViewSet
 from rest_framework_simplejwt.tokens import RefreshToken
 
 from .permissions import IsAdmin
-from .serializers import (CodeSerializer,
-                          SignUpSerializer,
-                          UserSerializer)
+from .serializers import CodeSerializer, SignUpSerializer, UserSerializer
 
 User = get_user_model()
 

@@ -1,12 +1,12 @@
 from django.shortcuts import get_object_or_404
 from django.utils.functional import cached_property
+from rest_framework import permissions, serializers, viewsets
 
-from rest_framework import viewsets, permissions, serializers
-
-from .serializers import ReviewSerializer, CommentSerializer
-from .models import Review
 from api_yamdb.permissions import AuthorModeratorAdminOrReadOnly
 from titles.models import Title
+
+from .models import Review
+from .serializers import CommentSerializer, ReviewSerializer
 
 
 class ReviewViewSet(viewsets.ModelViewSet):

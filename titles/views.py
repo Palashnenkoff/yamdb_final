@@ -2,13 +2,12 @@ from django.db.models import Avg
 from rest_framework import mixins, permissions
 from rest_framework.viewsets import GenericViewSet, ModelViewSet
 
+from api_yamdb.permissions import IsAdminOrReadOnly
+
 from .filters import TitleFilter
 from .models import Category, Genre, Title
-from .serializers import (CategorySerializer,
-                          GenreSerializer,
-                          TitleSerializer,
-                          TitleCreateSerializer)
-from api_yamdb.permissions import IsAdminOrReadOnly
+from .serializers import CategorySerializer, GenreSerializer
+from .serializers import TitleCreateSerializer, TitleSerializer
 
 
 class RetrieveCreateDeleteViewSet(mixins.ListModelMixin,
