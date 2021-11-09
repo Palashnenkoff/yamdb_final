@@ -1,3 +1,4 @@
+![example workflow](https://github.com/palashnenkoff/yamdb_final/actions/workflows/Django-app_workflow/badge.svg)
 # **Проект YamDB**
 
 YamDB - это база отзывов о фильмах, книгах и музыке. Здесь пользователь может оставить отзыв (Review) и выставить рейтинг произведению (Title). Произведения делятся на категории: «Книги», «Фильмы», «Музыка». При этом список категорий (Category) может быть расширен. Сами произведения в YamDB не хранятся.
